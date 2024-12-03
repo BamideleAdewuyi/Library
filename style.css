@@ -11,3 +11,7 @@
 #libraryDisplay{
     display: flex;
 }
+
+.book {
+    width: 10%;
+}
