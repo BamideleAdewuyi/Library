@@ -1,5 +1,6 @@
 // Html objects
 const container = document.querySelector(".container");
+const libraryDisplay = document.querySelector("#libraryDisplay");
 
 const myLibrary = [];
 
@@ -22,6 +23,6 @@ function display(array) {
         let newCard = document.createElement("div");
         newCard.id = array[i].title;
         newCard.className = "book";
-        
+
     }
 }
