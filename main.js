@@ -23,6 +23,16 @@ function display(array) {
         let newCard = document.createElement("div");
         newCard.id = array[i].title;
         newCard.className = "book";
+        
+        const newTitle = document.createTextNode(`Title: ${array[i].title}`);
+        const newAuthor = document.createTextNode(`Author: ${array[i].author}`);
+        const newPages = document.createTextNode(`Pages: ${array[i].pages}`);
+        const newRead = document.createTextNode(`Author: ${array[i].read}`);
+
+        newCard.appendChild(newTitle);
+        newCard.appendChild(newAuthor);
+        newCard.appendChild(newPages);
+        newCard.appendChild(newRead);
         libraryDisplay.appendChild(newDiv);
     }
 }
