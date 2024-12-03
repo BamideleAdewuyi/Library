@@ -17,6 +17,8 @@ function addBookToLibrary(book) {
 }
 
 let bondage = new Book(`Of Human Bondage`, `William Somerset Maugham`, 648, true);
+let expectations = new Book(`Great Expectations`, `Charles Dicknes`, 750, true);
+
 
 function display(array) {
     for (let i = 0; i < array.length; i++) {
