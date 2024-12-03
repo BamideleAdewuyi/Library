@@ -24,10 +24,14 @@ function display(array) {
         newCard.id = array[i].title;
         newCard.className = "book";
         
-        const newTitle = document.createTextNode(`Title: ${array[i].title}`);
-        const newAuthor = document.createTextNode(`Author: ${array[i].author}`);
-        const newPages = document.createTextNode(`Pages: ${array[i].pages}`);
-        const newRead = document.createTextNode(`Read: ${array[i].read}`);
+        const newTitle = document.createElement('p');
+        newTitle.innerText = `Title: ${array[i].title}`;
+        const newAuthor = document.createElement('p');
+        newAuthor.innerText = `Author: ${array[i].author}`;
+        const newPages = document.createElement('p');
+        newPages.innerText = `Pages: ${array[i].pages}`;
+        const newRead = document.createElement('p');
+        newRead.innerText = `Read: ${array[i].read}`;
 
         newCard.appendChild(newTitle);
         newCard.appendChild(newAuthor);
