@@ -7,3 +7,4 @@ function Book(title, author, pages, read) {
     this.read = read;
 }
 
+let bondage = new Book(`Of Human Bondage`, `William Somerset Maugham`, 648, true);
