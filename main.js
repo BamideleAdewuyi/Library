@@ -7,4 +7,8 @@ function Book(title, author, pages, read) {
     this.read = read;
 }
 
+function addBookToLibrary(book) {
+    myLibrary.push(book);
+}
+
 let bondage = new Book(`Of Human Bondage`, `William Somerset Maugham`, 648, true);
