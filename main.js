@@ -1,3 +1,6 @@
+// Html objects
+const container = document.querySelector(".container");
+
 const myLibrary = [];
 
 function Book(title, author, pages, read) {
