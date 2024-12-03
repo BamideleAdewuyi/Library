@@ -23,6 +23,6 @@ function display(array) {
         let newCard = document.createElement("div");
         newCard.id = array[i].title;
         newCard.className = "book";
-
+        libraryDisplay.appendChild(newDiv);
     }
 }
