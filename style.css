@@ -3,8 +3,11 @@
     padding: 0;
 }
 
-.container, .book, #libraryDisplay {
+.container, .book {
     display: flex;
     flex-direction: column;
 }
 
+#libraryDisplay{
+    display: flex;
+}
