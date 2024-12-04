@@ -11,7 +11,8 @@
 #libraryDisplay{
     display: flex;
     flex-wrap: wrap;
-    overflow: hidden;
+    height: 10%;
+    overflow: scroll;
 }
 
 .book {
