@@ -8,6 +8,10 @@
     flex-direction: column;
 }
 
+.container {
+    height: 100vh;
+}
+
 #libraryDisplay{
     display: flex;
     flex-wrap: wrap;
