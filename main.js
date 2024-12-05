@@ -1,6 +1,7 @@
 // Html objects
 const container = document.querySelector(".container");
 const libraryDisplay = document.querySelector("#libraryDisplay");
+const dialog = document.querySelector("dialog");
 
 const myLibrary = [];
 
@@ -17,7 +18,7 @@ function addBookToLibrary(book) {
 }
 
 let bondage = new Book(`Of Human Bondage`, `William Somerset Maugham`, 648, true);
-let expectations = new Book(`Great Expectations`, `Charles Dicknes`, 750, true);
+let expectations = new Book(`Great Expectations`, `Charles Dickens`, 750, true);
 let daughter = new Book(`The Daughter of Time`, `Josephine Tey`, 214, false);
 
 
