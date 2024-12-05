@@ -2,7 +2,7 @@
 const container = document.querySelector(".container");
 const libraryDisplay = document.querySelector("#libraryDisplay");
 const dialog = document.querySelector("dialog");
-const newBook = document.querySelector("#newBook");
+const newBookButton = document.querySelector("#newBookButton");
 const closeButton = document.querySelector(".closeButton");
 const newBookForm = document.querySelector(".newBookForm");
 const title = document.querySelector("#title");
@@ -59,6 +59,7 @@ newBook.addEventListener("click", () => {
 closeButton.addEventListener("click", () => {
     dialog.close();
 });
+
 
 
 
