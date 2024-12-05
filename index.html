@@ -18,8 +18,14 @@
                 <input type="text" placeholder="Enter author" name="author" required>
                 <label for="pages">Pages</label>
                 <input type="text" placeholder="Enter no. of pages" name="pages" required>
-                <label for="read">Read?</label>
-                <input type="text" placeholder="Enter whether read" name="read" required>
+                <label for="read">
+                    Read?
+                    <select name="read" id="readSelect">
+                        <option value="default">Choose...</option>
+                        <option>Read</option>
+                        <option>Not Read</option>
+                    </select>
+                </label>
                 <button class="submit">Add book</button>
                 <button type="button" class="closeButton" autofocus>Close</button>
             </form>
