@@ -2,6 +2,7 @@
 const container = document.querySelector(".container");
 const libraryDisplay = document.querySelector("#libraryDisplay");
 const dialog = document.querySelector("dialog");
+const newBook = document.querySelector("#newBook");
 
 const myLibrary = [];
 
