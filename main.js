@@ -61,7 +61,11 @@ closeButton.addEventListener("click", () => {
     dialog.close();
 });
 
-
+newBookForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    new Book(title.value, author.value, pages.value, read.value);
+    display(myLibrary);
+})
 
 
 display(myLibrary);
