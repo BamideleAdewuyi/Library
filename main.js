@@ -53,7 +53,7 @@ function display(array) {
     }
 }
 
-newBook.addEventListener("click", () => {
+newBookButton.addEventListener("click", () => {
     dialog.showModal();
 });
 
