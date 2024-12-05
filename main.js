@@ -3,6 +3,7 @@ const container = document.querySelector(".container");
 const libraryDisplay = document.querySelector("#libraryDisplay");
 const dialog = document.querySelector("dialog");
 const newBook = document.querySelector("#newBook");
+const closeButton = document.querySelector(".closeButton");
 
 const myLibrary = [];
 
@@ -45,5 +46,13 @@ function display(array) {
         libraryDisplay.appendChild(newCard);
     }
 }
+
+newBook.addEventListener("click", () => {
+    dialog.showModal();
+});
+
+closeButton.addEventListener("click", () => {
+    dialog.close();
+});
 
 display(myLibrary);
