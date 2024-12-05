@@ -4,6 +4,7 @@ const libraryDisplay = document.querySelector("#libraryDisplay");
 const dialog = document.querySelector("dialog");
 const newBook = document.querySelector("#newBook");
 const closeButton = document.querySelector(".closeButton");
+const newBookForm = document.querySelector(".newBookForm");
 
 const myLibrary = [];
 
