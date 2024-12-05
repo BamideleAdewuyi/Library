@@ -3,6 +3,7 @@ const container = document.querySelector(".container");
 const libraryDisplay = document.querySelector("#libraryDisplay");
 const dialog = document.querySelector("dialog");
 const newBookButton = document.querySelector("#newBookButton");
+const addBookButton = document.querySelector("#addBookButton");
 const closeButton = document.querySelector(".closeButton");
 const newBookForm = document.querySelector(".newBookForm");
 const title = document.querySelector("#title");
