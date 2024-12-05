@@ -5,6 +5,10 @@ const dialog = document.querySelector("dialog");
 const newBook = document.querySelector("#newBook");
 const closeButton = document.querySelector(".closeButton");
 const newBookForm = document.querySelector(".newBookForm");
+const title = document.querySelector("#title");
+const author = document.querySelector("#author");
+const pages = document.querySelector("#pages");
+const read = document.querySelector("#read");
 
 const myLibrary = [];
 
@@ -55,5 +59,7 @@ newBook.addEventListener("click", () => {
 closeButton.addEventListener("click", () => {
     dialog.close();
 });
+
+
 
 display(myLibrary);
