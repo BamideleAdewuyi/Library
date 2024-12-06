@@ -33,7 +33,7 @@ let daughter = new Book(`The Daughter of Time`, `Josephine Tey`, 214, false);
 function display(array) {
     for (let i = 0; i < array.length; i++) {
         let newCard = document.createElement("div");
-        newCard.id = array[i].title;
+        newCard.id = "book"+i;
         newCard.className = "book";
         
         const newTitle = document.createElement('p');
