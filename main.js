@@ -59,4 +59,5 @@ newBookForm.addEventListener("submit", (e) => {
     new Book(title.value, author.value, pages.value, read.value);
     display(myLibrary);
     newBookForm.reset();
+    dialog.close();
 })
