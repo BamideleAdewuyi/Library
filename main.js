@@ -39,13 +39,17 @@ function display(array) {
     newPages.innerText = `Pages: ${array[array.length-1].pages}`;
     let newRead = document.createElement('p');
     newRead.innerText = `Read: ${array[array.length-1].read}`;
+    let deleteButton = document.createElement("button");
+    deleteButton.innerText = "Delete Book";
 
     newCard.appendChild(newTitle);
     newCard.appendChild(newAuthor);
     newCard.appendChild(newPages);
     newCard.appendChild(newRead);
+    newCard.appendChild(deleteButton);
     libraryDisplay.appendChild(newCard);
     console.log(newCard.index);
+    console.log(myLibrary);
 }
 
 newBookButton.addEventListener("click", () => {
