@@ -25,3 +25,9 @@
     overflow: hidden;
     padding: 0.5em;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
