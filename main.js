@@ -25,32 +25,25 @@ function addBookToLibrary(book) {
     myLibrary.push(book);
 }
 
-let bondage = new Book(`Of Human Bondage`, `William Somerset Maugham`, 648, true);
-let expectations = new Book(`Great Expectations`, `Charles Dickens`, 750, true);
-let daughter = new Book(`The Daughter of Time`, `Josephine Tey`, 214, false);
-
-
 function display(array) {
-    for (let i = 0; i < array.length; i++) {
-        let newCard = document.createElement("div");
-        newCard.id = "book"+i;
-        newCard.className = "book";
-        
-        const newTitle = document.createElement('p');
-        newTitle.innerText = `Title: ${array[i].title}`;
-        const newAuthor = document.createElement('p');
-        newAuthor.innerText = `Author: ${array[i].author}`;
-        const newPages = document.createElement('p');
-        newPages.innerText = `Pages: ${array[i].pages}`;
-        const newRead = document.createElement('p');
-        newRead.innerText = `Read: ${array[i].read}`;
+    let newCard = document.createElement("div");
+    newCard.id = "book"+array.length-1;
+    newCard.className = "book";
 
-        newCard.appendChild(newTitle);
-        newCard.appendChild(newAuthor);
-        newCard.appendChild(newPages);
-        newCard.appendChild(newRead);
-        libraryDisplay.appendChild(newCard);
-    }
+    let newTitle = document.createElement('p');
+    newTitle.innerText = `Title: ${array[array.length-1].title}`;
+    let newAuthor = document.createElement('p');
+    newAuthor.innerText = `Author: ${array[array.length-1].author}`;
+    let newPages = document.createElement('p');
+    newPages.innerText = `Pages: ${array[array.length-1].pages}`;
+    let newRead = document.createElement('p');
+    newRead.innerText = `Read: ${array[array.length-1].read}`;
+
+    newCard.appendChild(newTitle);
+    newCard.appendChild(newAuthor);
+    newCard.appendChild(newPages);
+    newCard.appendChild(newRead);
+    libraryDisplay.appendChild(newCard);
 }
 
 newBookButton.addEventListener("click", () => {
@@ -66,6 +59,3 @@ newBookForm.addEventListener("submit", (e) => {
     new Book(title.value, author.value, pages.value, read.value);
     display(myLibrary);
 })
-
-
-display(myLibrary);
