@@ -42,6 +42,10 @@ function display(array) {
     let deleteButton = document.createElement("button");
     deleteButton.innerText = "Delete Book";
     deleteButton.className = "deleteButton";
+    deleteButton.addEventListener("click", (e) => {
+        deleteButton.parentElement.remove();
+        deleteButton.remove();
+    });
 
     newCard.appendChild(newTitle);
     newCard.appendChild(newAuthor);
@@ -68,3 +72,4 @@ newBookForm.addEventListener("submit", (e) => {
     newBookForm.reset();
     dialog.close();
 })
+
