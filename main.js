@@ -27,7 +27,7 @@ function addBookToLibrary(book) {
 
 function display(array) {
     let newCard = document.createElement("div");
-    newCard.id = "book"+array.length-1;
+    newCard.id = `book${array.length-1}`;
     newCard.className = "book";
 
     let newTitle = document.createElement('p');
@@ -58,4 +58,5 @@ newBookForm.addEventListener("submit", (e) => {
     e.preventDefault();
     new Book(title.value, author.value, pages.value, read.value);
     display(myLibrary);
+    newBookForm.reset();
 })
