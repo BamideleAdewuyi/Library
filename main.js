@@ -41,6 +41,7 @@ function display(array) {
     newRead.innerText = `Read: ${array[array.length-1].read}`;
     let deleteButton = document.createElement("button");
     deleteButton.innerText = "Delete Book";
+    deleteButton.className = "deleteButton";
 
     newCard.appendChild(newTitle);
     newCard.appendChild(newAuthor);
