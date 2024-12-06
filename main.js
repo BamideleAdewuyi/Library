@@ -29,6 +29,7 @@ function display(array) {
     let newCard = document.createElement("div");
     newCard.id = `book${array.length-1}`;
     newCard.className = "book";
+    newCard.index = array.length-1;
 
     let newTitle = document.createElement('p');
     newTitle.innerText = `Title: ${array[array.length-1].title}`;
@@ -44,6 +45,7 @@ function display(array) {
     newCard.appendChild(newPages);
     newCard.appendChild(newRead);
     libraryDisplay.appendChild(newCard);
+    console.log(newCard.index);
 }
 
 newBookButton.addEventListener("click", () => {
