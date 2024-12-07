@@ -25,6 +25,10 @@ function addBookToLibrary(book) {
     myLibrary.push(book);
 }
 
+function removeBookFromLibrary(bookIndex) {
+    
+}
+
 function display(array) {
     let newCard = document.createElement("div");
     newCard.id = `book${array.length-1}`;
