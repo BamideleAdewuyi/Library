@@ -26,7 +26,8 @@ function addBookToLibrary(book) {
 }
 
 function removeBookFromLibrary(bookIndex) {
-    
+    myLibrary.splice(bookIndex, 1);
+    display(myLibrary);
 }
 
 function display(array) {
@@ -51,7 +52,6 @@ function display(array) {
         deleteButton.parentElement.remove();
         deleteButton.remove();
     });
-
     newCard.appendChild(newTitle);
     newCard.appendChild(newAuthor);
     newCard.appendChild(newPages);
@@ -60,6 +60,7 @@ function display(array) {
     libraryDisplay.appendChild(newCard);
     console.log(newCard.index);
     console.log(myLibrary);
+
 }
 
 function display2(array) {
