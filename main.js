@@ -43,6 +43,7 @@ function display(array) {
     deleteButton.innerText = "Delete Book";
     deleteButton.className = "deleteButton";
     deleteButton.addEventListener("click", (e) => {
+        delete myLibrary[newCard.index];
         deleteButton.parentElement.remove();
         deleteButton.remove();
     });
