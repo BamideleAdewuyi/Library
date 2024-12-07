@@ -59,6 +59,7 @@ function display(array) {
 }
 
 function display2(array) {
+    libraryDisplay.replaceChildren();
     let newCard = document.createElement("div");
     newCard.id = `book${array.length-1}`;
     newCard.className = "book";
@@ -102,7 +103,7 @@ closeButton.addEventListener("click", () => {
 newBookForm.addEventListener("submit", (e) => {
     e.preventDefault();
     new Book(title.value, author.value, pages.value, read.value);
-    display(myLibrary);
+    display2(myLibrary);
     newBookForm.reset();
     dialog.close();
 })
