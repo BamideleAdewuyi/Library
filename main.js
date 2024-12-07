@@ -58,6 +58,39 @@ function display(array) {
     console.log(myLibrary);
 }
 
+function display2(array) {
+    let newCard = document.createElement("div");
+    newCard.id = `book${array.length-1}`;
+    newCard.className = "book";
+    newCard.index = array.length-1;
+
+    let newTitle = document.createElement('p');
+    newTitle.innerText = `Title: ${array[array.length-1].title}`;
+    let newAuthor = document.createElement('p');
+    newAuthor.innerText = `Author: ${array[array.length-1].author}`;
+    let newPages = document.createElement('p');
+    newPages.innerText = `Pages: ${array[array.length-1].pages}`;
+    let newRead = document.createElement('p');
+    newRead.innerText = `Read: ${array[array.length-1].read}`;
+    let deleteButton = document.createElement("button");
+    deleteButton.innerText = "Delete Book";
+    deleteButton.className = "deleteButton";
+    deleteButton.addEventListener("click", (e) => {
+        delete myLibrary[newCard.index];
+        deleteButton.parentElement.remove();
+        deleteButton.remove();
+    });
+
+    newCard.appendChild(newTitle);
+    newCard.appendChild(newAuthor);
+    newCard.appendChild(newPages);
+    newCard.appendChild(newRead);
+    newCard.appendChild(deleteButton);
+    libraryDisplay.appendChild(newCard);
+    console.log(newCard.index);
+    console.log(myLibrary);
+}
+
 newBookButton.addEventListener("click", () => {
     dialog.showModal();
 });
