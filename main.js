@@ -70,6 +70,7 @@ function display(array) {
         newCard.appendChild(newPages);
         newCard.appendChild(newRead);
         newCard.appendChild(deleteButton);
+        newCard.appendChild(readButton);
         libraryDisplay.appendChild(newCard);
     }
 }
