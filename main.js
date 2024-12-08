@@ -56,8 +56,12 @@ function display(array) {
         let newPages = document.createElement('p');
         newPages.innerText = `Pages: ${array[i].pages}`;
         let newRead = document.createElement('p');
-        newRead.innerText = `Read: ${array[i].read}`;
-
+        if (array[i].read) {
+            newRead.innerText = `You have read this book`;
+        }
+        else {
+            newRead.innerText = `You have NOT read this book`;
+        }
         let readButton = document.createElement("button");
         readButton.innerText = "Toggle Read Status";
         readButton.className - "readButton";
