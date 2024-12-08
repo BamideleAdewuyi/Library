@@ -28,7 +28,6 @@ Book.prototype.isRead = function() {
     else {
         this.read = true;
     }
-    display(myLibrary);
 };
 
 function addBookToLibrary(book) {
@@ -66,6 +65,7 @@ function display(array) {
         let readButton = document.createElement("button");
         readButton.innerText = "Toggle Read Status";
         readButton.className - "readButton";
+        readButton.addEventListener("click", array[i].isRead());
 
         let deleteButton = document.createElement("button");
         deleteButton.innerText = "Delete Book";
