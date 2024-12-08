@@ -21,7 +21,7 @@ function Book(title, author, pages, read) {
     addBookToLibrary(this);
 };
 
-Book.prototype.isRead = function() {
+Book.prototype.isRead = function(this) {
     if (this.read == true) {
         this.read = false;
     }
