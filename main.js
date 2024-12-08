@@ -41,7 +41,12 @@ function display(array) {
 
         let newCard = document.createElement("div");
         newCard.id = `book${i}`;
-        newCard.className = "book";
+        if (array[i].read == true) {
+            newCard.className = "readBook";
+        }
+        else {
+            newCard.className = "unreadBook";
+        }
         newCard.index = i;
     
         let newTitle = document.createElement('p');
