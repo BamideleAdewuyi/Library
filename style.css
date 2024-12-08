@@ -19,7 +19,7 @@
     overflow: scroll;
 }
 
-.book {
+.readBook, .unreadBook {
     width: 10%;
     outline: 2px solid blue;
     overflow: hidden;
