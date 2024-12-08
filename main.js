@@ -28,6 +28,7 @@ Book.prototype.isRead = function() {
     else {
         this.read = true;
     }
+    display(myLibrary);
 };
 
 function addBookToLibrary(book) {
