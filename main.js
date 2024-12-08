@@ -70,7 +70,12 @@ closeButton.addEventListener("click", () => {
 
 newBookForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    new Book(title.value, author.value, pages.value, read.value);
+    let readOrNot = false
+    if (read.value == "Read") {
+        readOrNot = true;
+    }
+    
+    new Book(title.value, author.value, pages.value, readOrNot);
     display(myLibrary);
     newBookForm.reset();
     dialog.close();
