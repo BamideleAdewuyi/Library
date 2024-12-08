@@ -52,6 +52,11 @@ function display(array) {
         newPages.innerText = `Pages: ${array[i].pages}`;
         let newRead = document.createElement('p');
         newRead.innerText = `Read: ${array[i].read}`;
+
+        let readButton = document.createElement("button");
+        readButton.innerText = "Toggle Read Status";
+        readButton.className - "readButton";
+
         let deleteButton = document.createElement("button");
         deleteButton.innerText = "Delete Book";
         deleteButton.className = "deleteButton";
