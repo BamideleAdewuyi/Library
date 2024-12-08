@@ -35,3 +35,7 @@ input::-webkit-inner-spin-button {
 .readBook {
     background-color: rgb(63, 239, 63);
 }
+
+.unreadBook {
+    background-color: rgb(206, 17, 17);
+}
