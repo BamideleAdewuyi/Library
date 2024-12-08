@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-.container, .book, .newBookForm {
+.container, .readBook, .unreadBook, .newBookForm {
     display: flex;
     flex-direction: column;
 }
