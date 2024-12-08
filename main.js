@@ -19,7 +19,16 @@ function Book(title, author, pages, read) {
     this.pages = pages;
     this.read = read;
     addBookToLibrary(this);
-}
+};
+
+Book.prototype.isRead = function() {
+    if (this.read == true) {
+        this.read = false;
+    }
+    else {
+        this.read = true;
+    }
+};
 
 function addBookToLibrary(book) {
     myLibrary.push(book);
@@ -74,7 +83,7 @@ newBookForm.addEventListener("submit", (e) => {
     if (read.value == "Read") {
         readOrNot = true;
     }
-    
+
     new Book(title.value, author.value, pages.value, readOrNot);
     display(myLibrary);
     newBookForm.reset();
