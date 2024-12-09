@@ -34,55 +34,75 @@ function addBookToLibrary(book) {
     myLibrary.push(book);
 }
 
-function render(array) {
+function render() {
     libraryDisplay.replaceChildren();
 
-    for (i = 0; i < array.length; i++) {
-
-        let newCard = document.createElement("div");
-        newCard.id = `book${i}`;
-        if (array[i].read == true) {
-            newCard.className = "readBook";
-        }
-        else {
-            newCard.className = "unreadBook";
-        }
-        newCard.index = i;
-    
-        let newTitle = document.createElement('p');
-        newTitle.innerText = `Title: ${array[i].title}`;
-        let newAuthor = document.createElement('p');
-        newAuthor.innerText = `Author: ${array[i].author}`;
-        let newPages = document.createElement('p');
-        newPages.innerText = `Pages: ${array[i].pages}`;
-        let newRead = document.createElement('p');
-        if (array[i].read) {
-            newRead.innerText = `You have read this book`;
-        }
-        else {
-            newRead.innerText = `You have NOT read this book`;
-        }
-        let readButton = document.createElement("button");
-        readButton.innerText = "Toggle Read Status";
-        readButton.className - "readButton";
-        readButton.addEventListener("click", array[i].isRead());
-
-        let deleteButton = document.createElement("button");
-        deleteButton.innerText = "Delete Book";
-        deleteButton.className = "deleteButton";
-        deleteButton.addEventListener("click", () => {
-            myLibrary.splice(newCard.index, 1);
-            render(myLibrary);
-        });
-    
-        newCard.appendChild(newTitle);
-        newCard.appendChild(newAuthor);
-        newCard.appendChild(newPages);
-        newCard.appendChild(newRead);
-        newCard.appendChild(deleteButton);
-        newCard.appendChild(readButton);
-        libraryDisplay.appendChild(newCard);
+    for (i = 0; i < myLibrary.length; i++) {
+        let book = myLibrary[i];
+        let bookEL = document.createElement("div");
+        bookEL.setAttribute("class", "bookCard");
+        bookEL.innerHTML = `
+            <div class="cardHeader">
+                <h3 class="title">${book.title}</h3
+                <h5 class="author">by ${book.author}</h5>
+            </div>
+            <div class="cardBody">
+                <p>${book.pages} pages</p>
+                <p class="readStatus">${book.read ? "Read" : "Not Read Yet"}</p>
+                <button class="removeButton" onclick="removeBook(${i})">Remove</button>
+                <button class="toggleReadButton" onclick="toggleRead(${i})">Toggle Read</button>
+            </div>
+        `;
+        libraryDisplay.appendChild(bookEL);
     }
+
+
+
+
+        // let newCard = document.createElement("div");
+        // newCard.id = `book${i}`;
+        // if (array[i].read == true) {
+        //     newCard.className = "readBook";
+        // }
+        // else {
+        //     newCard.className = "unreadBook";
+        // }
+        // newCard.index = i;
+    
+        // let newTitle = document.createElement('p');
+        // newTitle.innerText = `Title: ${array[i].title}`;
+        // let newAuthor = document.createElement('p');
+        // newAuthor.innerText = `Author: ${array[i].author}`;
+        // let newPages = document.createElement('p');
+        // newPages.innerText = `Pages: ${array[i].pages}`;
+        // let newRead = document.createElement('p');
+        // if (array[i].read) {
+        //     newRead.innerText = `You have read this book`;
+        // }
+        // else {
+        //     newRead.innerText = `You have NOT read this book`;
+        // }
+        // let readButton = document.createElement("button");
+        // readButton.innerText = "Toggle Read Status";
+        // readButton.className - "readButton";
+        // readButton.addEventListener("click", array[i].isRead());
+
+        // let deleteButton = document.createElement("button");
+        // deleteButton.innerText = "Delete Book";
+        // deleteButton.className = "deleteButton";
+        // deleteButton.addEventListener("click", () => {
+        //     myLibrary.splice(newCard.index, 1);
+        //     render(myLibrary);
+        // });
+    
+        // newCard.appendChild(newTitle);
+        // newCard.appendChild(newAuthor);
+        // newCard.appendChild(newPages);
+        // newCard.appendChild(newRead);
+        // newCard.appendChild(deleteButton);
+        // newCard.appendChild(readButton);
+        // libraryDisplay.appendChild(newCard);
+    // }
 }
 
 newBookButton.addEventListener("click", () => {
