@@ -34,7 +34,7 @@ function addBookToLibrary(book) {
     myLibrary.push(book);
 }
 
-function display(array) {
+function render(array) {
     libraryDisplay.replaceChildren();
 
     for (i = 0; i < array.length; i++) {
@@ -72,7 +72,7 @@ function display(array) {
         deleteButton.className = "deleteButton";
         deleteButton.addEventListener("click", () => {
             myLibrary.splice(newCard.index, 1);
-            display(myLibrary);
+            render(myLibrary);
         });
     
         newCard.appendChild(newTitle);
@@ -101,7 +101,7 @@ newBookForm.addEventListener("submit", (e) => {
     }
 
     new Book(title.value, author.value, pages.value, readOrNot);
-    display(myLibrary);
+    render(myLibrary);
     newBookForm.reset();
     dialog.close();
 })
