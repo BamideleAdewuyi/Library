@@ -24,6 +24,11 @@ Book.prototype.toggleRead = function() {
     this.read = !this.read;
 }
 
+function toggleRead(index) {
+    myLibrary[index].toggleRead();
+    render();
+}
+
 function addBookToLibrary() {
     let title = document.querySelector("#title").value;
     let author = document.getElementById("author").value;
