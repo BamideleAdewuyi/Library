@@ -35,7 +35,8 @@ function addBookToLibrary() {
     let pages = document.getElementById("pages").value;
     let read = document.getElementById("read").checked;
     let newBook = new Book(title, author, pages, read);
-    console.log(newBook)
+    myLibrary.push(newBook);
+    render(myLibrary);
 }
 
 function removeBook(index) {
@@ -77,7 +78,6 @@ closeButton.addEventListener("click", () => {
 newBookForm.addEventListener("submit", (e) => {
     e.preventDefault();
     addBookToLibrary();
-    render(myLibrary);
     newBookForm.reset();
     dialog.close();
 })
