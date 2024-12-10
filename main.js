@@ -20,14 +20,9 @@ function Book(title, author, pages, read) {
     this.read = read;
 };
 
-Book.prototype.isRead = function() {
-    if (this.read == true) {
-        this.read = false;
-    }
-    else {
-        this.read = true;
-    }
-};
+Book.prototype.toggleRead = function() {
+    this.read = !this.read;
+}
 
 function addBookToLibrary() {
     let title = document.querySelector("#title").value;
