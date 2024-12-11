@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-.container, .readBook, .unreadBook, .newBookForm {
+.container, .newBookForm {
     display: flex;
     flex-direction: column;
 }
@@ -19,23 +19,8 @@
     overflow: scroll;
 }
 
-.readBook, .unreadBook {
-    width: 10%;
-    outline: 2px solid blue;
-    overflow: hidden;
-    padding: 0.5em;
-}
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
-}
-
-.readBook {
-    background-color: rgb(63, 239, 63);
-}
-
-.unreadBook {
-    background-color: rgb(206, 17, 17);
 }
